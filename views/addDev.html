@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <h1>
+        <a href="/"> Home </a> &nbsp;
+        <a href="/listAllDevs">List All Developers </a>&nbsp;
+        <a href="/addNewTask">Add New Task </a> &nbsp;
+        <a href="/listAllTasks">List All Tasks </a>&nbsp;
+        <a href="/updateTask">Update Task Status </a>&nbsp;
+        <a href="/deleteTask">Delete Task </a>&nbsp;
+        <a href="/deleteCompleted">Delete Completed Tasks </a></br></br>
+
+        <form action="/devAdded" method="POST">
+            First Name:
+            <input type="text" name="firstName" /> </br>
+            Last Name:
+            <input type="text" name="lastName" /> </br>
+            Level
+            <select name = "devLevel"> 
+                <option value="Beginner">Beginner</option>
+                <option value="Expert">Expert</option>
+            </select> </br>
+            Address</br>
+            Unit
+            <input type="text" name="addrUnit" /> </br>
+            Street
+            <input type="text" name="addrStreet" /> </br>
+            Suburb
+            <input type="text" name="addrSuburb" /> </br>
+            State
+            <select name = "addrState"> 
+                <option value="ACT">ACT</option>
+                <option value="QLD">QLD</option>
+                <option value="NSW">NSW</option>
+                <option value="NT">NT</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+            </select> </br>
+            <button>Submit</button>
+        </form>
+    </h1>
+</html>

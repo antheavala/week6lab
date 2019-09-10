@@ -1,0 +1,41 @@
+<html> 
+    <head>
+         <link rel="stylesheet" href="styles.css">
+         <style>
+                table,th,td {
+                    border: 1px solid black;
+                }
+            </style>
+    </head>
+
+    <h1> 
+        <a href="/"> Home </a> &nbsp;
+        <a href="/addNewDev">Add New Developer </a>&nbsp;
+        <a href="/listAllDevs">List All Developers </a>&nbsp;
+        <a href="/addNewTask">Add New Task </a> &nbsp;
+        <a href="/updateTask">Update Task Status </a>&nbsp;
+        <a href="/deleteTask">Delete Task </a>&nbsp;
+        <a href="/deleteCompleted">Delete Completed Tasks </a>
+    </h1></br></br>
+    <table>
+        <tr>
+            <th>Task ID</th>
+            <th>Name</th>
+            <th>Assigned to</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Description</th>
+        </tr>
+        <% for(var i=0; i<data.length; i++){%>
+            <tr>
+                <td><%= data[i]._id %></td>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].assign.name.firstName
+                    +" "+ data[i].assign.name.lastName %></td>
+                <td><%= data[i].due.toLocaleDateString('en-GB') %></td>
+                <td><%= data[i].status %></td>
+                <td><%= data[i].desc %></td>
+            </tr>
+        <% } %>
+    </table>
+</html>
