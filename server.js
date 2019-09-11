@@ -76,6 +76,12 @@ app.get('/listAllDevs', function(req,res){
     });
 });
 
+app.get('/sortTasks', function(req,res){
+    Task.where({'status':'Complete'}).sort({'name':-1}).limit(3).populate('assign').exec(function(err,docs){
+        res.render('listTasks.html', {data: docs});
+    });
+});
+
 //POST REQUESTS
 
 app.post('/taskAdded', function(req,res){
